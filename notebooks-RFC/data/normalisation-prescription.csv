@@ -1,0 +1,8 @@
+patient_id,patient_name,doctor_id,doctor_name,date,drug_code,drug_name,dosage,duration
+p001,Thornton,d06,Gibson,15-May-14,T02378,Tramadol,50 mg 3 x day,As required
+,,,,15-May-14,O17663,Omeprazole,40 mg 1 x day,Daily
+,,,,23-May-14,S33558,Simvastatin,40 mg 1 x day,Daily
+,,,,15-Jun-14,A12458,Amitriptyline,10 mg 5 x day,As required
+p007,Tennent,d07,Paxton,01-Jun-14,C31319,Ciprofloxacin,500 mg 2 x day,20 days
+,,,,01-Jun-14,T05223,Tamsulosin,40 mg 1 x day,20 days
+,,,,01-Jul-14,S33558,Simvastatin,20 mg 1 x day,6 weeks

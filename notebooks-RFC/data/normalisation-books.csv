@@ -1,0 +1,9 @@
+invoice_no,date,customer_no,customer_name,isbn,title,quantity,cost
+966047,01-Jul-14,123789,Dimity Stone,978-1292025827,A First Course in Database Systems,10,£10.00
+,,,,978-1558604568,SQL:1999,10,£54.99
+,,,,978-0071005296,Database System Concepts,10,£9.55
+,,,,978-0130402646,Database System Implementation,10,£48.78
+,,,,978-1852330088,A Guided Tour of Relational Databases,10,£41.69
+966048,01-Jul-14,234678,Roger Monk,978-0071005296,Database System Concepts,1,£9.55
+,,,,978-0471141617,Building the Data Warehouse,1,£9.55
+,,,,978-1558604896,Data Mining: Concepts and Techniques,1,£18.55
