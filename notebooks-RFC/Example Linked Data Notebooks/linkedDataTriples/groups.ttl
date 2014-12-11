@@ -1,0 +1,872 @@
+
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://id.learning-provider.data.ac.uk/group/1994_Group>
+	a foaf:Organization ;
+	rdfs:label "1994 Group" ;
+	owl:sameAs <http://dbpedia.org/resource/1994_Group> ;
+	foaf:isPrimaryTopicOf <http://en.wikipedia.org/wiki/1994_Group> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10005553> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10002718> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007760> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007789> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007768> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007791> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007802> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007806> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10004113> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007780> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007796> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007766> ;
+	foaf:homepage <http://www.1994group.ac.uk/> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10005553>
+	a foaf:Organization ;
+	rdfs:label "ROYAL HOLLOWAY COLLEGE AND BEDFORD NEW COLLEGE" ;
+	foaf:homepage <http://www.rhul.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Royal_Holloway,_University_of_London>, <http://gtr.rcuk.ac.uk:80/organisation/A6D6F944-7BD0-49D0-8F3D-1D5B15E2E134> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10002718>
+	a foaf:Organization ;
+	rdfs:label "GOLDSMITHS' COLLEGE" ;
+	foaf:homepage <http://www.gold.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Goldsmiths,_University_of_London>, <http://gtr.rcuk.ac.uk:80/organisation/A9B1866C-EE3E-4D81-A83C-118745E9433E> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007760>
+	a foaf:Organization ;
+	rdfs:label "BIRKBECK COLLEGE" ;
+	foaf:homepage <http://www.bbk.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Birkbeck,_University_of_London>, <http://gtr.rcuk.ac.uk:80/organisation/3E18DACB-05AA-4C71-88FB-C909A8311BB5> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007789>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF EAST ANGLIA" ;
+	foaf:homepage <http://www.uea.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_East_Anglia>, <http://gtr.rcuk.ac.uk:80/organisation/88C5F7F9-8DCC-41C9-BC4F-F37DA01075C7> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007768>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF LANCASTER" ;
+	foaf:homepage <http://www.lancs.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Lancaster_University>, <http://gtr.rcuk.ac.uk:80/organisation/F8C7F869-77D6-4859-96F1-3550A4951F6C> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007791>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF ESSEX" ;
+	foaf:homepage <http://www.essex.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Essex>, <http://gtr.rcuk.ac.uk:80/organisation/5C29941F-8359-4D5C-9893-4C268A9DF1AC> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007802>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF READING" ;
+	foaf:homepage <http://www.reading.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Reading>, <http://gtr.rcuk.ac.uk:80/organisation/E89C3602-0FB4-4044-A918-58966B8A10B2> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007806>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF SUSSEX" ;
+	foaf:homepage <http://www.sussex.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Sussex>, <http://gtr.rcuk.ac.uk:80/organisation/A8967420-49D3-4509-9912-25FB3EC75B74> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10004113>
+	a foaf:Organization ;
+	rdfs:label "LOUGHBOROUGH UNIVERSITY" ;
+	foaf:homepage <http://www.lboro.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Loughborough_University>, <http://gtr.rcuk.ac.uk:80/organisation/CAA9A40D-0226-4A4F-AC0D-D8299E30A1EF> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007780>
+	a foaf:Organization ;
+	rdfs:label "SCHOOL OF ORIENTAL AND AFRICAN STUDIES" ;
+	foaf:homepage <http://www.soas.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/School_of_Oriental_and_African_Studies>, <http://gtr.rcuk.ac.uk:80/organisation/B1B0C694-8B41-4FDC-A4F0-8B18407D793B> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007796>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF LEICESTER" ;
+	foaf:homepage <http://www.le.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Leicester>, <http://gtr.rcuk.ac.uk:80/organisation/C842A34F-18F7-454D-A259-FED802368496> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007766>
+	a foaf:Organization ;
+	rdfs:label "INSTITUTE OF EDUCATION, UNIVERSITY OF LONDON" ;
+	foaf:homepage <http://www.ioe.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Institute_of_Education>, <http://gtr.rcuk.ac.uk:80/organisation/0D34D81A-A62C-4B11-8A90-ACB670C0AE91> .
+
+<http://id.learning-provider.data.ac.uk/group/White_Rose_University_Consortium>
+	a foaf:Organization ;
+	rdfs:label "White Rose University Consortium" ;
+	owl:sameAs <http://dbpedia.org/resource/White_Rose_University_Consortium> ;
+	foaf:isPrimaryTopicOf <http://en.wikipedia.org/wiki/White_Rose_University_Consortium> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007795> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007167> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007157> ;
+	foaf:homepage <http://www.whiterose.ac.uk/> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007795>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF LEEDS" ;
+	foaf:homepage <http://www.leeds.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Leeds>, <http://gtr.rcuk.ac.uk:80/organisation/65E7B3BB-0570-4F2A-9415-C7D336AA6477> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007167>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF YORK" ;
+	foaf:homepage <http://www.york.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_York>, <http://gtr.rcuk.ac.uk:80/organisation/8319F78A-DCBD-49F6-BE00-78E1CD75CDA9> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007157>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF SHEFFIELD" ;
+	foaf:homepage <http://www.shef.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Sheffield>, <http://gtr.rcuk.ac.uk:80/organisation/03D8AFBB-3EA5-4885-B036-BD4F9F4F9849> .
+
+<http://id.learning-provider.data.ac.uk/group/Million_Plus>
+	a foaf:Organization ;
+	rdfs:label "Million+" ;
+	owl:sameAs <http://dbpedia.org/resource/Million%2B> ;
+	foaf:isPrimaryTopicOf <http://en.wikipedia.org/wiki/Million%2B> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10004351> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007849> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10000571> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007146> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10006841> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10006299> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007851> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007159> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10000291> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007140> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007800> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007166> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007152> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10004048> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10006566> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007141> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10001143> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10003861> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007842> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007144> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007772> ;
+	foaf:homepage <http://www.millionplus.ac.uk/> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10004351>
+	a foaf:Organization ;
+	rdfs:label "MIDDLESEX UNIVERSITY" ;
+	foaf:homepage <http://www.mdx.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Middlesex_University>, <http://gtr.rcuk.ac.uk:80/organisation/AB979D25-DDBE-4C82-9D51-F38618FE37BD> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007849>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF ABERTAY DUNDEE" ;
+	foaf:homepage <http://www.abertay.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Abertay_Dundee>, <http://gtr.rcuk.ac.uk:80/organisation/544242A5-6640-4FD5-87C5-348557ED5307> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10000571>
+	a foaf:Organization ;
+	rdfs:label "BATH SPA UNIVERSITY" ;
+	foaf:homepage <http://www.bathspa.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Bath_Spa_University>, <http://gtr.rcuk.ac.uk:80/organisation/1A469850-02BA-4814-81EE-E60C851CABC3> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007146>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF GREENWICH" ;
+	foaf:homepage <http://www.greenwich.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Greenwich>, <http://gtr.rcuk.ac.uk:80/organisation/2F667752-ABE0-4914-9C97-82F42CC11C60> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10006841>
+	a foaf:Organization ;
+	rdfs:label "THE UNIVERSITY OF BOLTON" ;
+	foaf:homepage <http://www.bolton.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Bolton>, <http://gtr.rcuk.ac.uk:80/organisation/6CD99DF2-EA37-4EF2-8FC0-3FB1D421D2F1> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10006299>
+	a foaf:Organization ;
+	rdfs:label "STAFFORDSHIRE UNIVERSITY" ;
+	foaf:homepage <http://www.staffs.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Staffordshire_University>, <http://gtr.rcuk.ac.uk:80/organisation/E277EDD9-0ADD-44E4-B8A1-709121CA7E7D> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007851>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF DERBY" ;
+	foaf:homepage <http://www.derby.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Derby>, <http://gtr.rcuk.ac.uk:80/organisation/FDC92628-BF2E-4EEB-A9EB-2FDED0999959> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007159>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF SUNDERLAND" ;
+	foaf:homepage <http://www.sunderland.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Sunderland>, <http://gtr.rcuk.ac.uk:80/organisation/CDD64036-C7C4-4924-8321-6076FB363042> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10000291>
+	a foaf:Organization ;
+	rdfs:label "ANGLIA RUSKIN UNIVERSITY" ;
+	foaf:homepage <http://www.anglia.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Anglia_Ruskin_University>, <http://gtr.rcuk.ac.uk:80/organisation/56F19F82-4654-46D6-891A-EA80CBC02587> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007140>
+	a foaf:Organization ;
+	rdfs:label "BIRMINGHAM CITY UNIVERSITY" ;
+	foaf:homepage <http://www.bcu.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Birmingham_City_University>, <http://gtr.rcuk.ac.uk:80/organisation/A022BD3A-2A7B-4E64-8877-A2E381C4CCB5> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007800>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF THE WEST OF SCOTLAND" ;
+	foaf:homepage <http://www.uws.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_the_West_of_Scotland>, <http://gtr.rcuk.ac.uk:80/organisation/6786BBB0-D64D-4D47-B725-7AD417D4ED4F> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007166>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF WOLVERHAMPTON" ;
+	foaf:homepage <http://www.wlv.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Wolverhampton>, <http://gtr.rcuk.ac.uk:80/organisation/1A3C4B4D-A492-43D4-BD25-729BD718D1E9> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007152>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF BEDFORDSHIRE" ;
+	foaf:homepage <http://www.beds.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Bedfordshire>, <http://gtr.rcuk.ac.uk:80/organisation/BA42FE9E-1091-4F26-9645-58A2BECFD230> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10004048>
+	a foaf:Organization ;
+	rdfs:label "LONDON METROPOLITAN UNIVERSITY" ;
+	foaf:homepage <http://www.londonmet.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/London_Metropolitan_University>, <http://gtr.rcuk.ac.uk:80/organisation/3A1483A5-3CFF-403D-8AB5-FAE5B8EB86B4> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10006566>
+	a foaf:Organization ;
+	rdfs:label "THE UNIVERSITY OF WEST LONDON" ;
+	foaf:homepage <http://www.uwl.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_West_London>, <http://gtr.rcuk.ac.uk:80/organisation/7B7DD8F3-EC06-4C09-8E26-051B2D57EF46> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007141>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF CENTRAL LANCASHIRE" ;
+	foaf:homepage <http://www.uclan.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Central_Lancashire>, <http://gtr.rcuk.ac.uk:80/organisation/AEC15D5A-BFD5-4D34-978F-500C126C4FDC> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10001143>
+	a foaf:Organization ;
+	rdfs:label "CANTERBURY CHRIST CHURCH UNIVERSITY" ;
+	foaf:homepage <http://www.canterbury.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Canterbury_Christ_Church_University>, <http://gtr.rcuk.ac.uk:80/organisation/9DCA54FA-7193-4B70-9A85-369C1FD85B5D> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10003861>
+	a foaf:Organization ;
+	rdfs:label "LEEDS METROPOLITAN UNIVERSITY" ;
+	foaf:homepage <http://www.leedsmet.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Leeds_Metropolitan_University>, <http://gtr.rcuk.ac.uk:80/organisation/2C135ED2-40D8-49ED-A792-C2E2B72DFB98> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007842>
+	a foaf:Organization ;
+	rdfs:label "THE UNIVERSITY OF CUMBRIA" ;
+	foaf:homepage <http://www.cumbria.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Cumbria>, <http://gtr.rcuk.ac.uk:80/organisation/ECA474B6-9AAC-445C-97E4-019D2A903C89> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007144>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF EAST LONDON" ;
+	foaf:homepage <http://www.uel.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_East_London>, <http://gtr.rcuk.ac.uk:80/organisation/1109E202-4FE3-40AC-B73E-7B37EF45241A> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007772>
+	a foaf:Organization ;
+	rdfs:label "EDINBURGH NAPIER UNIVERSITY" ;
+	foaf:homepage <http://www.napier.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Edinburgh_Napier_University>, <http://gtr.rcuk.ac.uk:80/organisation/0740327D-1A22-41B4-82F9-1CC65BB29610> .
+
+<http://id.learning-provider.data.ac.uk/group/N8_Research_Partnership>
+	a foaf:Organization ;
+	rdfs:label "N8 Research Parnership" ;
+	owl:sameAs <http://dbpedia.org/resource/N8_Research_Partnership> ;
+	foaf:isPrimaryTopicOf <http://en.wikipedia.org/wiki/N8_Research_Partnership> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007799> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007143> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007795> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007768> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10006842> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007167> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007798> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007157> ;
+	foaf:homepage <http://www.n8research.org.uk/> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007799>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF NEWCASTLE UPON TYNE" ;
+	foaf:homepage <http://www.ncl.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Newcastle_University>, <http://gtr.rcuk.ac.uk:80/organisation/5E2B04DD-4A03-45ED-9892-61C5CCB8AC68> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007143>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF DURHAM" ;
+	foaf:homepage <http://www.dur.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Durham_University>, <http://gtr.rcuk.ac.uk:80/organisation/46B41008-0EB4-4E28-BBFB-E98366999EC5> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007795>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF LEEDS" ;
+	foaf:homepage <http://www.leeds.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Leeds>, <http://gtr.rcuk.ac.uk:80/organisation/65E7B3BB-0570-4F2A-9415-C7D336AA6477> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007768>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF LANCASTER" ;
+	foaf:homepage <http://www.lancs.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Lancaster_University>, <http://gtr.rcuk.ac.uk:80/organisation/F8C7F869-77D6-4859-96F1-3550A4951F6C> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10006842>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF LIVERPOOL" ;
+	foaf:homepage <http://www.liv.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Liverpool>, <http://gtr.rcuk.ac.uk:80/organisation/A0A585E0-6B0D-4643-A3A6-47943B4CBFEF> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007167>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF YORK" ;
+	foaf:homepage <http://www.york.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_York>, <http://gtr.rcuk.ac.uk:80/organisation/8319F78A-DCBD-49F6-BE00-78E1CD75CDA9> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007798>
+	a foaf:Organization ;
+	rdfs:label "THE UNIVERSITY OF MANCHESTER" ;
+	foaf:homepage <http://www.manchester.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Manchester>, <http://gtr.rcuk.ac.uk:80/organisation/E5AFE7E4-FF5D-4FF1-B50B-E04A6DF7D791> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007157>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF SHEFFIELD" ;
+	foaf:homepage <http://www.shef.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Sheffield>, <http://gtr.rcuk.ac.uk:80/organisation/03D8AFBB-3EA5-4885-B036-BD4F9F4F9849> .
+
+<http://id.learning-provider.data.ac.uk/group/University_Alliance>
+	a foaf:Organization ;
+	rdfs:label "University Alliance" ;
+	owl:sameAs <http://dbpedia.org/resource/University_Alliance> ;
+	foaf:isPrimaryTopicOf <http://en.wikipedia.org/wiki/University_Alliance> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10005790> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007801> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007161> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007773> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007854> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007164> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10001282> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007151> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10004180> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007785> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10000824> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007147> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007762> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10003678> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007853> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10003957> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007148> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10004797> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10001726> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007793> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10001883> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10004930> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007155> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007156> ;
+	foaf:homepage <http://www.unialliance.ac.uk/> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10005790>
+	a foaf:Organization ;
+	rdfs:label "SHEFFIELD HALLAM UNIVERSITY" ;
+	foaf:homepage <http://www.shu.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Sheffield_Hallam_University>, <http://gtr.rcuk.ac.uk:80/organisation/52FDE897-E62F-4388-A588-9382D1E7C2D3> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007801>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF PLYMOUTH" ;
+	foaf:homepage <http://www.plymouth.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Plymouth>, <http://gtr.rcuk.ac.uk:80/organisation/7801F008-7C77-45E7-90E9-4345B47D138E> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007161>
+	a foaf:Organization ;
+	rdfs:label "TEESSIDE UNIVERSITY" ;
+	foaf:homepage <http://www.tees.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Teesside_University>, <http://gtr.rcuk.ac.uk:80/organisation/B5FF76C6-FFAD-4E1F-9279-7452750B94B7> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007773>
+	a foaf:Organization ;
+	rdfs:label "OPEN UNIVERSITY(THE)" ;
+	foaf:homepage <http://www.open.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/The_Open_University>, <http://gtr.rcuk.ac.uk:80/organisation/89E6D9CB-DAF8-40A2-A9EF-B330A5A7FC24> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007854>
+	a foaf:Organization ;
+	rdfs:label "CARDIFF METROPOLITAN UNIVERSITY" ;
+	foaf:homepage <http://www.cardiffmet.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Cardiff_Metropolitan_University>, <http://gtr.rcuk.ac.uk:80/organisation/8FE3A477-8A3B-4E51-AE01-4ABCE9099213> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007164>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF THE WEST OF ENGLAND, BRISTOL" ;
+	foaf:homepage <http://www.uwe.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_the_West_of_England>, <http://gtr.rcuk.ac.uk:80/organisation/2A80FFDA-3B8B-43BA-80C3-3AA850B49BA1> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10001282>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF NORTHUMBRIA AT NEWCASTLE" ;
+	foaf:homepage <http://www.northumbria.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Northumbria_University>, <http://gtr.rcuk.ac.uk:80/organisation/EF390CF0-ECD3-47D8-B9A8-7602AF319BEE> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007151>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF LINCOLN" ;
+	foaf:homepage <http://www.lincoln.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Lincoln>, <http://gtr.rcuk.ac.uk:80/organisation/D64641C7-D9A6-4B41-9C8F-03F7396CB8DA> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10004180>
+	a foaf:Organization ;
+	rdfs:label "THE MANCHESTER METROPOLITAN UNIVERSITY" ;
+	foaf:homepage <http://www.mmu.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Manchester_Metropolitan_University>, <http://gtr.rcuk.ac.uk:80/organisation/E594FDB4-DD6F-441F-90D6-C423A2916446> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007785>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF BRADFORD" ;
+	foaf:homepage <http://www.bradford.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Bradford>, <http://gtr.rcuk.ac.uk:80/organisation/0838B2E1-D5E2-4ACD-AA27-D2B1BFDC124F> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10000824>
+	a foaf:Organization ;
+	rdfs:label "BOURNEMOUTH UNIVERSITY" ;
+	foaf:homepage <http://www.bournemouth.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Bournemouth_University>, <http://gtr.rcuk.ac.uk:80/organisation/C0088682-E757-4D2A-BA97-C2D411DDCFFB> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007147>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF HERTFORDSHIRE" ;
+	foaf:homepage <http://www.herts.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Hertfordshire>, <http://gtr.rcuk.ac.uk:80/organisation/5E589D68-A73C-42BB-892C-BC508C7B60CA> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007762>
+	a foaf:Organization ;
+	rdfs:label "GLASGOW CALEDONIAN UNIVERSITY" ;
+	foaf:homepage <http://www.gcu.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Glasgow_Caledonian_University>, <http://gtr.rcuk.ac.uk:80/organisation/679E3226-7E46-4F18-90B6-0B4FE734C099> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10003678>
+	a foaf:Organization ;
+	rdfs:label "KINGSTON UNIVERSITY" ;
+	foaf:homepage <http://www.kingston.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Kingston_University>, <http://gtr.rcuk.ac.uk:80/organisation/6E750E7A-C076-435E-8AB0-484F65D6C7AD> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007853>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF WALES, NEWPORT" ;
+	foaf:homepage <http://www.newport.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Wales,_Newport>, <http://gtr.rcuk.ac.uk:80/organisation/9820DB25-93F6-4C41-9FCC-08911313490E> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10003957>
+	a foaf:Organization ;
+	rdfs:label "LIVERPOOL JOHN MOORES UNIVERSITY" ;
+	foaf:homepage <http://www.ljmu.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Liverpool_John_Moores_University>, <http://gtr.rcuk.ac.uk:80/organisation/772A1E12-7175-46C0-B665-CE27930D15A8> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007148>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF HUDDERSFIELD" ;
+	foaf:homepage <http://www.hud.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Huddersfield>, <http://gtr.rcuk.ac.uk:80/organisation/DC934AED-9432-4385-AEAF-006EA2369001> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10004797>
+	a foaf:Organization ;
+	rdfs:label "NOTTINGHAM TRENT UNIVERSITY" ;
+	foaf:homepage <http://www.ntu.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Nottingham_Trent_University>, <http://gtr.rcuk.ac.uk:80/organisation/1529782F-9068-4364-888E-46E4FC4881F5> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10001726>
+	a foaf:Organization ;
+	rdfs:label "COVENTRY UNIVERSITY" ;
+	foaf:homepage <http://www.coventry.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Coventry_University>, <http://gtr.rcuk.ac.uk:80/organisation/D60C85C3-0343-430E-81C7-B04058A4B1DF> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007793>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF GLAMORGAN / PRIFYSGOL MORGANNWG" ;
+	foaf:homepage <http://www.glam.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Glamorgan>, <http://gtr.rcuk.ac.uk:80/organisation/7B3A72B2-7C68-4D1C-A7ED-102C7805B561> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10001883>
+	a foaf:Organization ;
+	rdfs:label "DE MONTFORT UNIVERSITY" ;
+	foaf:homepage <http://www.dmu.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/De_Montfort_University>, <http://gtr.rcuk.ac.uk:80/organisation/DF259B19-FD17-4588-BFEF-AD08F1193451> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10004930>
+	a foaf:Organization ;
+	rdfs:label "OXFORD BROOKES UNIVERSITY" ;
+	foaf:homepage <http://www.brookes.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Oxford_Brookes_University>, <http://gtr.rcuk.ac.uk:80/organisation/CEB496D0-8DC8-4905-8F65-D1ACDAD75C9B> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007155>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF PORTSMOUTH" ;
+	foaf:homepage <http://www.port.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Portsmouth>, <http://gtr.rcuk.ac.uk:80/organisation/955C55E8-783E-4842-BB2C-2D275A3CAF82> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007156>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF SALFORD" ;
+	foaf:homepage <http://www.salford.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Salford>, <http://gtr.rcuk.ac.uk:80/organisation/ED6ACD61-0140-4C05-B93D-2C6A42CA753B> .
+
+<http://id.learning-provider.data.ac.uk/group/Russell_Group>
+	a foaf:Organization ;
+	rdfs:label "Russell Group" ;
+	owl:sameAs <http://dbpedia.org/resource/Russell_Group> ;
+	foaf:isPrimaryTopicOf <http://en.wikipedia.org/wiki/Russell_Group> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10004063> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007774> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10006842> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007786> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007167> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007798> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007814> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007158> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007784> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007163> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007154> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007157> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007799> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007143> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007794> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10003645> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007788> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007790> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007795> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10003270> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007775> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10006840> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007792> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10005343> ;
+	foaf:homepage <http://www.russellgroup.ac.uk/> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10004063>
+	a foaf:Organization ;
+	rdfs:label "LONDON SCHOOL OF ECONOMICS & POLITICAL SCIENCE" ;
+	foaf:homepage <http://www.lse.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/London_School_of_Economics>, <http://gtr.rcuk.ac.uk:80/organisation/EC177B1F-35EE-4B74-981D-E8382EE3D18C> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007774>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF OXFORD" ;
+	foaf:homepage <http://www.ox.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Oxford>, <http://gtr.rcuk.ac.uk:80/organisation/B1F0E8FE-FE3C-49ED-9C96-1ED75312A8A0> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10006842>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF LIVERPOOL" ;
+	foaf:homepage <http://www.liv.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Liverpool>, <http://gtr.rcuk.ac.uk:80/organisation/A0A585E0-6B0D-4643-A3A6-47943B4CBFEF> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007786>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF BRISTOL" ;
+	foaf:homepage <http://www.bristol.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Bristol>, <http://gtr.rcuk.ac.uk:80/organisation/FD94FDDE-5BBC-4E12-911F-0B70DBCFA743> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007167>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF YORK" ;
+	foaf:homepage <http://www.york.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_York>, <http://gtr.rcuk.ac.uk:80/organisation/8319F78A-DCBD-49F6-BE00-78E1CD75CDA9> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007798>
+	a foaf:Organization ;
+	rdfs:label "THE UNIVERSITY OF MANCHESTER" ;
+	foaf:homepage <http://www.manchester.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Manchester>, <http://gtr.rcuk.ac.uk:80/organisation/E5AFE7E4-FF5D-4FF1-B50B-E04A6DF7D791> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007814>
+	a foaf:Organization ;
+	rdfs:label "CARDIFF UNIVERSITY" ;
+	foaf:homepage <http://www.cardiff.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Cardiff_University>, <http://gtr.rcuk.ac.uk:80/organisation/9C10D78F-6430-4CA7-9528-B96B0762A4C6> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007158>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF SOUTHAMPTON" ;
+	foaf:homepage <http://www.soton.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Southampton>, <http://gtr.rcuk.ac.uk:80/organisation/30A429E3-83B7-4E41-99C0-14A144F07DFE> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007784>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY COLLEGE LONDON" ;
+	foaf:homepage <http://www.ucl.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_College_London>, <http://gtr.rcuk.ac.uk:80/organisation/3A5E126D-C175-4730-9B7B-E6D8CF447F83> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007163>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF WARWICK" ;
+	foaf:homepage <http://www.warwick.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Warwick>, <http://gtr.rcuk.ac.uk:80/organisation/B6FB652A-60C3-48DD-9A33-075D1F759B48> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007154>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF NOTTINGHAM" ;
+	foaf:homepage <http://www.nottingham.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Nottingham>, <http://gtr.rcuk.ac.uk:80/organisation/936D002F-A8D1-4A93-AE5D-825ED0903D8D> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007157>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF SHEFFIELD" ;
+	foaf:homepage <http://www.shef.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Sheffield>, <http://gtr.rcuk.ac.uk:80/organisation/03D8AFBB-3EA5-4885-B036-BD4F9F4F9849> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007799>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF NEWCASTLE UPON TYNE" ;
+	foaf:homepage <http://www.ncl.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Newcastle_University>, <http://gtr.rcuk.ac.uk:80/organisation/5E2B04DD-4A03-45ED-9892-61C5CCB8AC68> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007143>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF DURHAM" ;
+	foaf:homepage <http://www.dur.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Durham_University>, <http://gtr.rcuk.ac.uk:80/organisation/46B41008-0EB4-4E28-BBFB-E98366999EC5> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007794>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF GLASGOW" ;
+	foaf:homepage <http://www.gla.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Glasgow>, <http://gtr.rcuk.ac.uk:80/organisation/D949B0B2-08E0-4BFC-963B-5E378E92BDDA> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10003645>
+	a foaf:Organization ;
+	rdfs:label "KING'S COLLEGE LONDON" ;
+	foaf:homepage <http://www.kcl.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/King%27s_College_London>, <http://gtr.rcuk.ac.uk:80/organisation/318B5D98-4CB4-4B10-A876-08FC93071A56> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007788>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF CAMBRIDGE" ;
+	foaf:homepage <http://www.cam.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Cambridge>, <http://gtr.rcuk.ac.uk:80/organisation/D1774113-D5D2-4B7C-A412-66A90FE4B96F> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007790>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF EDINBURGH" ;
+	foaf:homepage <http://www.ed.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Edinburgh>, <http://gtr.rcuk.ac.uk:80/organisation/F0F2AC58-F3D5-4F25-8E51-6AF679C5EBFA> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007795>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF LEEDS" ;
+	foaf:homepage <http://www.leeds.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Leeds>, <http://gtr.rcuk.ac.uk:80/organisation/65E7B3BB-0570-4F2A-9415-C7D336AA6477> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10003270>
+	a foaf:Organization ;
+	rdfs:label "IMPERIAL COLLEGE OF SCIENCE, TECHNOLOGY AND MEDICINE" ;
+	foaf:homepage <http://www.imperial.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Imperial_College_London>, <http://gtr.rcuk.ac.uk:80/organisation/46387D84-F71E-4B7D-8C7D-9C288F113510> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007775>
+	a foaf:Organization ;
+	rdfs:label "QUEEN MARY AND WESTFIELD COLLEGE, UNIVERSITY OF LONDON" ;
+	foaf:homepage <http://www.qmul.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Queen_Mary,_University_of_London>, <http://gtr.rcuk.ac.uk:80/organisation/D5337A10-AC8A-402A-8164-C5F9CC6B0140> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10006840>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF BIRMINGHAM" ;
+	foaf:homepage <http://www.birmingham.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Birmingham>, <http://gtr.rcuk.ac.uk:80/organisation/818CD6C9-61EE-41F2-9F37-0C7A8F43E25D> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007792>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF EXETER" ;
+	foaf:homepage <http://www.exeter.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Exeter>, <http://gtr.rcuk.ac.uk:80/organisation/961756BF-E31F-4A13-836F-0A09BA02385C> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10005343>
+	a foaf:Organization ;
+	rdfs:label "THE QUEEN'S UNIVERSITY OF BELFAST" ;
+	foaf:homepage <http://www.qub.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Queen%27s_University_Belfast>, <http://gtr.rcuk.ac.uk:80/organisation/6DF12A24-BEFF-40FA-9A8E-D79B6BFDF346> .
+
+<http://id.learning-provider.data.ac.uk/group/NCUK>
+	a foaf:Organization ;
+	rdfs:label "The Northern Consortium (NCUK)" ;
+	owl:sameAs <http://dbpedia.org/resource/NCUK> ;
+	foaf:isPrimaryTopicOf <http://en.wikipedia.org/wiki/NCUK> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007786> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007150> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007807> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007775> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10006840> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007759> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10005343> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10003678> ;
+	foaf:homepage <http://www.ncuk.ac.uk/universities/uk> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007786>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF BRISTOL" ;
+	foaf:homepage <http://www.bristol.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Bristol>, <http://gtr.rcuk.ac.uk:80/organisation/FD94FDDE-5BBC-4E12-911F-0B70DBCFA743> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007150>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF KENT" ;
+	foaf:homepage <http://www.kent.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Kent>, <http://gtr.rcuk.ac.uk:80/organisation/687D087F-AEDD-4BCE-8CF8-E895FC5E9B3D> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007807>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF ULSTER" ;
+	foaf:homepage <http://www.ulster.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Ulster>, <http://gtr.rcuk.ac.uk:80/organisation/245EB81A-808F-4697-BAED-263C20266B74> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007775>
+	a foaf:Organization ;
+	rdfs:label "QUEEN MARY AND WESTFIELD COLLEGE, UNIVERSITY OF LONDON" ;
+	foaf:homepage <http://www.qmul.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Queen_Mary,_University_of_London>, <http://gtr.rcuk.ac.uk:80/organisation/D5337A10-AC8A-402A-8164-C5F9CC6B0140> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10006840>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF BIRMINGHAM" ;
+	foaf:homepage <http://www.birmingham.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Birmingham>, <http://gtr.rcuk.ac.uk:80/organisation/818CD6C9-61EE-41F2-9F37-0C7A8F43E25D> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007759>
+	a foaf:Organization ;
+	rdfs:label "ASTON UNIVERSITY" ;
+	foaf:homepage <http://www.aston.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Aston_University>, <http://gtr.rcuk.ac.uk:80/organisation/5BFB9036-9D16-4AB9-A9EF-097BB6FBD69A> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10005343>
+	a foaf:Organization ;
+	rdfs:label "THE QUEEN'S UNIVERSITY OF BELFAST" ;
+	foaf:homepage <http://www.qub.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Queen%27s_University_Belfast>, <http://gtr.rcuk.ac.uk:80/organisation/6DF12A24-BEFF-40FA-9A8E-D79B6BFDF346> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10003678>
+	a foaf:Organization ;
+	rdfs:label "KINGSTON UNIVERSITY" ;
+	foaf:homepage <http://www.kingston.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Kingston_University>, <http://gtr.rcuk.ac.uk:80/organisation/6E750E7A-C076-435E-8AB0-484F65D6C7AD> .
+
+<http://id.learning-provider.data.ac.uk/group/Cathedrals_Group>
+	a foaf:Organization ;
+	rdfs:label "Cathedrals Group (CCUC)" ;
+	owl:sameAs <http://dbpedia.org/resource/Cathedrals_Group> ;
+	foaf:isPrimaryTopicOf <http://en.wikipedia.org/wiki/Cathedrals_Group> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007848> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10004206> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10003863> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007832> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007765> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007713> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007776> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007137> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007858> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007145> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007811> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10003956> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007843> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10001143> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10007842> ;
+	foaf:member <http://id.learning-provider.data.ac.uk/ukprn/10003614> ;
+	foaf:homepage <http://cathedralsgroup.org.uk/> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007848>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF CHESTER" ;
+	foaf:homepage <http://www.chester.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Chester>, <http://gtr.rcuk.ac.uk:80/organisation/A7AF2001-3B9F-4618-AEDF-C2DDEE927102> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10004206>
+	a foaf:Organization ;
+	rdfs:label "COLLEGE OF ST. MARK AND ST. JOHN FOUNDATION (THE)" ;
+	foaf:homepage <http://www.marjon.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_College_Plymouth_St_Mark_%26_St_John> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10003863>
+	a foaf:Organization ;
+	rdfs:label "LEEDS TRINITY UNIVERSITY COLLEGE" ;
+	foaf:homepage <http://www.leedstrinity.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Leeds_Trinity_University_College> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007832>
+	a foaf:Organization ;
+	rdfs:label "NEWMAN UNIVERSITY COLLEGE" ;
+	foaf:homepage <http://www.newman.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Newman_University_College> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007765>
+	a foaf:Organization ;
+	rdfs:label "HEYTHROP COLLEGE" ;
+	foaf:homepage <http://www.heythrop.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Heythrop_College> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007713>
+	a foaf:Organization ;
+	rdfs:label "YORK ST JOHN UNIVERSITY" ;
+	foaf:homepage <http://www.yorksj.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/York_St_John_University>, <http://gtr.rcuk.ac.uk:80/organisation/E3A7C679-6D40-45AA-A211-20EB6C28AC37> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007776>
+	a foaf:Organization ;
+	rdfs:label "ROEHAMPTON UNIVERSITY" ;
+	foaf:homepage <http://www.roehampton.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Roehampton_University>, <http://gtr.rcuk.ac.uk:80/organisation/0107329B-F086-4C36-8652-5AF6752EC6DC> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007137>
+	a foaf:Organization ;
+	rdfs:label "THE UNIVERSITY OF CHICHESTER" ;
+	foaf:homepage <http://www.chi.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Chichester>, <http://gtr.rcuk.ac.uk:80/organisation/FA776DBE-78D5-49D0-AFA1-77BEC03EFF15> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007858>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF WALES: TRINITY SAINT DAVID" ;
+	foaf:homepage <http://www.trinitysaintdavid.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Wales,_Trinity_Saint_David> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007145>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF GLOUCESTERSHIRE" ;
+	foaf:homepage <http://www.glos.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Gloucestershire>, <http://gtr.rcuk.ac.uk:80/organisation/FFAF7C9F-6946-4B94-B0CF-2EDE44020A94> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007811>
+	a foaf:Organization ;
+	rdfs:label "BISHOP GROSSETESTE UNIVERSITY COLLEGE LINCOLN" ;
+	foaf:homepage <http://www.bishopg.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Bishop_Grosseteste_University>, <http://gtr.rcuk.ac.uk:80/organisation/2455D70D-E7A2-4D77-A7FE-B618FCF13C46> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10003956>
+	a foaf:Organization ;
+	rdfs:label "LIVERPOOL HOPE UNIVERSITY" ;
+	foaf:homepage <http://www.hope.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Liverpool_Hope_University>, <http://gtr.rcuk.ac.uk:80/organisation/B4833390-EB88-4440-ABE0-E80140B75D12> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007843>
+	a foaf:Organization ;
+	rdfs:label "ST MARY'S UNIVERSITY COLLEGE, TWICKENHAM" ;
+	foaf:homepage <http://www.smuc.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/St._Mary%27s_University_College_%28Twickenham%29>, <http://gtr.rcuk.ac.uk:80/organisation/F8A38BAB-5A5C-44BA-BC24-8114AD09C832> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10001143>
+	a foaf:Organization ;
+	rdfs:label "CANTERBURY CHRIST CHURCH UNIVERSITY" ;
+	foaf:homepage <http://www.canterbury.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/Canterbury_Christ_Church_University>, <http://gtr.rcuk.ac.uk:80/organisation/9DCA54FA-7193-4B70-9A85-369C1FD85B5D> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10007842>
+	a foaf:Organization ;
+	rdfs:label "THE UNIVERSITY OF CUMBRIA" ;
+	foaf:homepage <http://www.cumbria.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Cumbria>, <http://gtr.rcuk.ac.uk:80/organisation/ECA474B6-9AAC-445C-97E4-019D2A903C89> .
+
+<http://id.learning-provider.data.ac.uk/ukprn/10003614>
+	a foaf:Organization ;
+	rdfs:label "UNIVERSITY OF WINCHESTER" ;
+	foaf:homepage <http://www.winchester.ac.uk/> ; 
+	owl:sameAs <http://dbpedia.org/resource/University_of_Winchester>, <http://gtr.rcuk.ac.uk:80/organisation/4B87FBC4-8055-43E8-B493-B2FED8A31423> .
