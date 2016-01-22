@@ -1,0 +1,13 @@
+{
+  "load_extensions": {
+    "codefolding/main": true,
+    "rubberband/main": true,
+    "exercise/main": true,
+    "odszip/main": true,
+    "activityCodeCell/main": true,
+    "answer_button/main": true,
+    "commentateCodeCell/main": true,
+    "python-markdown/main": true,
+    "read-only/main":true
+  }
+}
