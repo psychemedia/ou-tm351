@@ -4,7 +4,7 @@ MAINTAINER tony.hirst@gmail.com
 
 # Install Headless JRE after updating installed packages.
 RUN apt-get clean -y && apt-get -y update && apt-get -y upgrade && \
- 	apt-get install -y wget ant unzip openjdk-6-jre-headless && \
+ 	apt-get install -y wget ant unzip openjdk-7-jre-headless && \
  	apt-get clean -y
 
 ##22/01/16 - mac/docker toolbox 1.9.1i
