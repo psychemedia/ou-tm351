@@ -12,11 +12,11 @@ RUN apt-get clean -y && apt-get -y update && apt-get -y upgrade && \
 ##See: https://github.com/docker/docker/issues/18180
 
 #Download OpenRefine
-RUN wget --no-check-certificate https://github.com/OpenRefine/OpenRefine/releases/download/2.6-beta.1/openrefine-linux-2.6-beta.1.tar.gz 
+RUN wget --no-check-certificate https://github.com/OpenRefine/OpenRefine/releases/download/2.6-rc1/openrefine-linux-2.6-rc1.tar.gz 
 
 #Unpack OpenRefine and tidy up
-RUN tar -xzf openrefine-linux-2.6-beta.1.tar.gz  && rm openrefine-linux-2.6-beta.1.tar.gz
+RUN tar -xzf openrefine-linux-2.6-rc1.tar.gz  && rm openrefine-linux-2.6-rc1.tar.gz
 
 EXPOSE 3333
 RUN mkdir /mnt/refine
-CMD ["openrefine-2.6-beta.1/refine", "-i", "0.0.0.0", "-d", "/mnt/refine"]
+CMD ["openrefine-2.6-rc1/refine", "-i", "0.0.0.0", "-d", "/mnt/refine"]
