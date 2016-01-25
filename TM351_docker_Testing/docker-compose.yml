@@ -61,8 +61,7 @@ postgres:
 
 openrefine:
     container_name: tm351-openrefine
-    image: psychemedia/openrefine_ou:tm351d2test
-    ports:
+    image: psychemedia/ou-tm351-openrefine
         - "35181:3333"
     volumes:
         - ./openrefine_projects/:/mnt/refine
