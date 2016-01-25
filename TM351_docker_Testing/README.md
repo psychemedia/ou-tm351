@@ -2,6 +2,11 @@
 
 Scribble pad repo for sharing ideas around TM351 docker implementation...
 
+The containers are available on dockerhub, for example:
+
+- [psychemedia/ou-tm351-pystack](https://hub.docker.com/r/psychemedia/ou-tm351-pystack/)
+- [psychemedia/ou-tm351-openrefine](https://hub.docker.com/r/psychemedia/ou-tm351-openrefine/)
+
 __Not for use as part of the course__
 
 ## Usage:
@@ -14,6 +19,8 @@ __Not for use as part of the course__
 ## docker-machine - Digital Ocean
 
 Quick start for getting up and running on [Digital Ocean](https://www.digitalocean.com/?refcode=0dc8918c828f).
+
+- download the `docker-compose.yml` file to the current directory (that's the only file you should need - the container images are prebuilt on dockerhub).
 
 ```
 docker-machine ls
