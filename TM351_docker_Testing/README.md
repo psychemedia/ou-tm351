@@ -20,7 +20,8 @@ __Not for use as part of the course__
 
 Quick start for getting up and running on [Digital Ocean](https://www.digitalocean.com/?refcode=0dc8918c828f).
 
-- download the `docker-compose.yml` file to the current directory (that's the only file you should need - the container images are prebuilt on dockerhub).
+- download the `docker-compose.yml` file to the current directory (that's the only file you should need - the container images are prebuilt on dockerhub);
+- from a docker command line (eg raised via the Docker CLI link in Kitematic), run the following commands:
 
 ```
 docker-machine ls
