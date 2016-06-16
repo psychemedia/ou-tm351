@@ -1,0 +1,199 @@
+MONGOPATH="/etc/mongodb/bin"
+
+NUMBER_OF_SHARD_SERVERS = 5
+
+#-----------
+
+#Check we have a logging area
+!sudo mkdir -p /vagrant/logs
+
+#-----------
+
+!sudo rm -rf /var/lib/mongodb/shard*
+
+#-----------
+
+!echo "create /var/lib/mongodb/shard* dirs"
+for i in range(NUMBER_OF_SHARD_SERVERS):
+    !sudo mkdir -p /var/lib/mongodb/shard{i}
+    !sudo chmod a+rwx /var/lib/mongodb/shard{i}
+
+#-----------
+
+!echo "create /var/lib/mongodb/shard-configsvr dir"
+!sudo mkdir -p /var/lib/mongodb/shard-configsvr
+!sudo chmod a+rwx /var/lib/mongodb/shard-configsvr
+
+#-----------
+
+!echo "create /etc/mongo-shard-mongos.conf"
+
+conf_file = """# mongos.conf
+
+systemLog:
+   destination: file
+   path: "/vagrant/logs/shard-mongos.log"
+   quiet: false
+   logAppend: true
+processManagement:
+   fork: true
+   pidFilePath: "/vagrant/logs/shard-mongos.pid"
+net:
+   bindIp: 0.0.0.0
+   # port: 27018
+sharding:
+   configDB: 127.0.0.1:27019
+"""
+!sudo echo "{conf_file}" > /etc/mongo-shard-mongos.conf
+
+#------
+
+print("create /etc/mongo-shard-configsvr.conf")
+
+conf_file = """# mongod.conf
+
+systemLog:
+   destination: file
+   path: "/vagrant/logs/shard-configsvr.log"
+   quiet: false
+   logAppend: true
+storage:
+   dbPath: /var/lib/mongodb/shard-configsvr
+   journal:
+      # enabled: true
+      enabled: false
+processManagement:
+   fork: true
+   pidFilePath: "/vagrant/logs/shard-configsvr.pid"
+net:
+   bindIp: 0.0.0.0
+   # port: 27019
+sharding:
+   clusterRole: configsvr
+"""
+!sudo echo "{conf_file}" > /etc/mongo-shard-configsvr.conf
+
+#-------
+
+print("create /etc/mongo-shard*.conf")
+
+for sn in range(NUMBER_OF_SHARD_SERVERS):
+    conf_file = """# mongod.conf
+
+systemLog:
+   destination: file
+   path: "/vagrant/logs/shard-mongod{sn}.log"
+   quiet: false
+   logAppend: true
+storage:
+   dbPath: /var/lib/mongodb/shard{sn}
+   journal:
+      # enabled: true
+      enabled: false
+processManagement:
+   fork: true
+   pidFilePath: "/vagrant/logs/shard-mongod{sn}.pid"
+net:
+   bindIp: 0.0.0.0
+   port: 3100{sn}
+sharding:
+   clusterRole: shardsvr
+""".format(sn=sn)
+    !sudo echo "{conf_file}" > /etc/mongo-shard{sn}.conf
+
+#---------
+
+!echo "create /etc/mongo-shards-up"
+
+#Should we also run a repair on the database?
+#This would normally be triggered by spotting a lock?
+
+script = """#!/bin/bash
+
+for f in /etc/mongo-shard-configsvr*conf ; do
+    echo "Spinning up config server $f"
+    {MONGOPATH}/mongod --config $f
+done
+
+for f in /etc/mongo-shard-mongos*conf ; do
+    echo "Spinning up mongos server $f"
+    {MONGOPATH}/mongos --config $f
+done
+
+
+for i in {{0..{N}}}
+do
+   mkdir -p /var/lib/mongodb/shard$i
+   chmod -R a+rwx /var/lib/mongodb/shard$i
+   echo -n "."
+done
+
+
+for i in {{0..{N}}} ; do
+      echo "Spinning up shard server /etc/mongo-shard${{i}}.conf"
+      {MONGOPATH}/mongod --config /etc/mongo-shard${{i}}.conf
+done""".format(MONGOPATH=MONGOPATH, N=NUMBER_OF_SHARD_SERVERS-1)
+!sudo echo '{script}' > /etc/mongo-shards-up
+!sudo chmod a+x /etc/mongo-shards-up
+
+
+#---------
+
+print("create /etc/mongo-shards-down")
+
+script = """#!/bin/bash
+
+for f in /vagrant/logs/shard*pid ; do
+    read pid < $f 
+    echo "Killing process $pid found in $f"
+    kill $pid
+    rm -f $f
+done
+
+#Should we leave the lock files, then if they
+#exist on shards-up delete them and run a repair?
+for f in /var/lib/mongodb/*/mongod.lock ; do
+    echo "Removing lock file $f"
+    rm -f $f
+done
+"""
+!sudo echo '{script}' > /etc/mongo-shards-down
+!sudo chmod a+x /etc/mongo-shards-down
+
+
+#
+
+
+#Fire up the sharded server for the first time
+#...but rip down any that already exist first...
+!/etc/mongo-shards-down
+!/etc/mongo-shards-up
+#Wait awhile
+!echo "Sleep awhile to let things come up..."
+!sleep 15
+  		
+
+#Setup shards
+!echo "setup shards..."
+import pymongo
+
+client = pymongo.MongoClient('mongodb://127.0.0.1:27017')
+
+for i in range(NUMBER_OF_SHARD_SERVERS):
+    client.admin.command('addShard', "localhost:3100{sn}".format(sn = i))
+
+
+#Setup initial database
+!echo "setup initial database..."
+
+client.drop_database('accidents')
+client.admin.command('enableSharding', 'accidents')
+client.admin.command('shardCollection', 'accidents.accidents', key={"Accident_Index": 1})
+client.admin.command('shardCollection', 'accidents.roads', key={"CP": 1})
+
+!echo "Sleep awhile to let things settle..."
+!sleep 5
+
+#Restore a dataset
+! echo "Try a restore..."
+! sudo /etc/mongodb/bin/mongorestore /tmpdatafiles/dump-0912
