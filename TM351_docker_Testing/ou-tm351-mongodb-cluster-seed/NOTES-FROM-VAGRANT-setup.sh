@@ -1,3 +1,11 @@
+#!/bin/bash
+
+cp /vagrant/multi-server-config/mongo_path.sh /etc/profile.d/mongo_path.sh
+#All this contains is: export PATH=/etc/mongodb/bin:$PATH
+
+
+#if [ ! -f ~/mongo_installed ]
+#then
 	echo "Installing mongo: "
 	#HOWTO: http://docs.mongodb.org/manual/tutorial/install-mongodb-on-linux/
 
