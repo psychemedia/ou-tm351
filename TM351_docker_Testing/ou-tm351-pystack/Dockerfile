@@ -3,7 +3,7 @@ FROM psychemedia/ou-tm351-jupyter-custom
 MAINTAINER tony.hirst@gmail.com
 
 #Add the additional TM351 stack elements
-ADD build_tm351_stack_16b.sh /tmp/build_tm351_stack.sh
+ADD build_tm351_stack_16j.sh /tmp/build_tm351_stack.sh
 RUN bash /tmp/build_tm351_stack.sh
 
 
