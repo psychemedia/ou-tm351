@@ -1,6 +1,6 @@
 dockerui:
     container_name: tm351-dockerui
-    image: dockerui/dockerui
+    image: uifd/ui-for-docker
     ports:
         - "35183:9000"
     volumes:
