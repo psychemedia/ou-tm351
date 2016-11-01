@@ -26,7 +26,6 @@ for PYTHONVER in 3 ; do
   $PIP install lxml==3.5.0
 
   $PIP install cython==0.23.4
-  $PIP install tables==3.2.2
   $PIP install openpyxl==2.3.2
   $PIP install python-dateutil==2.4.2
   $PIP install xlrd==0.9.4
@@ -38,10 +37,11 @@ for PYTHONVER in 3 ; do
   $PIP install beautifulsoup4==4.4.1
   $PIP install filemagic==1.6
   $PIP install dataset==0.6.1
-  $PIP install six=1.10.0
+  $PIP install six==1.10.0
   $PIP install csvkit==0.9.1
   $PIP install numpy==1.10.1
   $PIP install numexpr==2.4.6
+  $PIP install tables==3.2.2
   $PIP install pandas==0.17.1
   $PIP install matplotlib==1.5.0
   $PIP install nltk==3.1
