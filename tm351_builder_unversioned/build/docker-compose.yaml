@@ -1,0 +1,50 @@
+notebook:
+    container_name: tm351-notebook-test
+    #build: ./jupyter-base
+    image: psychemedia/ou-tm351-jupyter-custom-pystack-mongoshard-test
+    ports:
+        - "35150:8888"
+    volumes:
+        - ./notebooks/:/notebooks/
+    links:
+        - postgres:postgres
+        - mongodb:mongodb
+        - openrefine:openrefine
+    privileged: true
+    
+mongodb:
+  container_name: tm351-mongosimple-test
+  image: psychemedia/ou-tm351-mongo-simple-test
+  ports:
+    - "27017:27017"
+
+openrefine:
+    container_name: tm351-openrefine
+    image: psychemedia/ou-tm351-openrefine-test
+    ports:
+        - "35151:3334"
+    volumes:
+        - ./openrefine_projects/:/mnt/refine
+    privileged: true
+
+
+devpostgresdata:
+    container_name: tm351-devpostgresdata
+    command: echo created
+    image: busybox
+    volumes: 
+        - /var/lib/postgresql/data
+    
+postgres:
+    container_name: tm351-postgres
+    environment:
+        - POSTGRES_PASSWORD=PGPass
+    image: psychemedia/ou-tm351-postgres-test
+    ports:
+        - "5432:5432"
+    #Ideally we should be able to mount this - or the data container - 
+    # against a host directory
+    #volumes:
+    #    - ./db/postgres/:/var/lib/postgresql/data
+    volumes_from:
+        - devpostgresdata

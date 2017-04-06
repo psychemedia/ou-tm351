@@ -1,0 +1,35 @@
+[Unit]
+Description=High-performance, schema-free document-oriented database
+After=network.target
+Documentation=https://docs.mongodb.org/manual
+
+[Service]
+User=mongodb
+Group=mongodb
+ExecStart=/usr/bin/mongod --quiet --config /etc/mongodb.conf
+
+#Should the ExecStart run a script that does a bit more? eg"
+#if [ -f /data/db/mongod.lock ]; then
+#rm /data/db/mongod.lock
+##sudo /etc/mongodb/bin/mongod --repair
+#fi
+
+# file size
+#LimitFSIZE=infinity
+# cpu time
+#LimitCPU=infinity
+# virtual memory size
+#LimitAS=infinity
+# open files
+#LimitNOFILE=64000
+# processes/threads
+#LimitNPROC=64000
+# total threads (user+kernel)
+#TasksMax=infinity
+#TasksAccounting=false
+
+# Recommended limits for for mongod as specified in
+# http://docs.mongodb.org/manual/reference/ulimit/#recommended-settings
+
+[Install]
+WantedBy=multi-user.target

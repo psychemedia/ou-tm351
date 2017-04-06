@@ -1,0 +1,33 @@
+{
+  "variables": {
+    "aws_access_key": "",
+    "aws_secret_key": ""
+  },
+  "builders": [{
+    "type": "amazon-ebs",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+    "region": "eu-west-1",
+    "source_ami": "ami-971238f1",
+    "instance_type": "t2.micro",
+    "ssh_username": "ubuntu",
+    "ami_name": "openrefine",
+    "security_group_id": "sg-46568b3f"
+  }],
+  
+  "provisioners": [
+
+    {
+      "destination": "/tmp/",
+      "source": "./toupload/",
+      "type": "file"
+    },
+    {
+      "inline": [
+        "cd /tmp && sudo apt-get update && sudo apt-get install unzip && sudo unzip /tmp/quickbuild.zip -d /tmp && sudo chmod ugo+x /tmp/quickbuild/quick_build.sh && sudo /tmp/quickbuild/quick_build.sh "
+      ],
+      "type": "shell"
+    }
+  ]
+
+}

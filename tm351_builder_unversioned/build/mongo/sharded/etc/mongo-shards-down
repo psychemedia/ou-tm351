@@ -1,0 +1,19 @@
+#!/bin/bash
+
+for f in /vagrant/logs/mongocluster_*pid ; do
+     read pid < $f 
+     echo "Killing process $pid found in $f"
+     kill $pid
+     rm -f $f
+done
+
+echo "Wait a mo to check processes are down..."
+sleep 5
+echo "...ok"
+
+#Should we leave the lock files, then if they
+#exist on shards-up delete them and run a repair?
+# for f in /var/lib/mongodb/*/mongod.lock ; do
+#     echo "Removing lock file $f"
+#     rm -f $f
+# done

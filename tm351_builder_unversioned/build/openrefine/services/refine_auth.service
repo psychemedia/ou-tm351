@@ -1,0 +1,25 @@
+[Unit]
+Description=Refine
+
+#When to bring the service up
+#via https://www.freedesktop.org/wiki/Software/systemd/NetworkTarget/
+#Wait for a network stack to appear
+After=network.target
+#If we actually need the network to have a routable IP address:
+#After=network-online.target 
+
+
+[Service]
+Environment=REFINE_HOST=127.0.0.1
+ExecStart=/opt/openrefine-2.7-rc.2/refine -p 3334 -d /vagrant/openrefine_projects
+Restart=always
+RestartSec=10
+
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
+

@@ -1,0 +1,14 @@
+<html><head><title>Test page</title></head>
+<body><div><img src="images/OU_logo_unofficial.png" /></div>
+<h1>Welcome to the TM351 Virtual Machine</h1>
+<div>If you can see this page, you have successfully launched an instance of the TM351 virtual machine. The TM351 browser based services are available (using simple password authentication, username <em>tm351</em> and the password you have been supplied with) via the following locations:</div>
+<ul>
+<script language="JavaScript">
+var hostname = window.location.hostname=='' ? "port " : window.location.hostname+":"
+document.write('<li>Jupyter notebooks: <a href="//' + hostname + '35180" >'+hostname+'35180</a>' );
+document.write('<li>OpenRefine: <a href="//' + hostname + '35181" >'+hostname+'35181</a>' );
+</script>
+</ul>
+
+
+</body></html>
