@@ -158,6 +158,10 @@ You can see what services you are consuming from the [EC2 dashboard](https://eu-
 
 ![](images/EC2_Management_Console0.png)
 
+If you have finished with the TM351, and don't want to continue paying Amazon for any resource usage, make sure that you *terminate* any TM351 AMI *instances* you launched and ensure any *volumes* associated with them have been deleted.
+
+Also check to make sure that you have deleted any *snapshots* created whilst using the machine.
+
 ## Getting Started with the AWS CLI
 
 As well as controlling Amazon Web Services via the online web console, you can also execute commands from the command line using the [AWS CLI (command line interface)](https://aws.amazon.com/cli/).
