@@ -1,6 +1,6 @@
 #via https://gist.github.com/whophil/5a2eab328d2f8c16bb31c9ceaf23164f
 [Unit]
-Description=Jupyter Notebook
+Description=OU TM351 Jupyter Notebook
 
 #When to bring the service up
 #via https://www.freedesktop.org/wiki/Software/systemd/NetworkTarget/
@@ -13,7 +13,9 @@ After=network.target
 Type=simple
 PIDFile=/run/jupyter.pid
 
-ExecStart=/usr/local/bin/jupyter notebook --ip=0.0.0.0 --y --log-level=WARN --no-browser --notebook-dir=/vagrant/notebooks --allow-root
+ExecStartPre=mkdir -p /vagrant/notebooks
+
+ExecStart=/usr/local/bin/jupyter notebook --port=8888 --ip=0.0.0.0 --y --log-level=WARN --no-browser --notebook-dir=/vagrant/notebooks --allow-root
 
 Restart=always
 RestartSec=10

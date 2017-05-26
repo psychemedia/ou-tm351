@@ -45,7 +45,10 @@ if [[ -z "${DOCKERBUILD}" ]]; then
 	if [[ -z "${AUTHBUILD}" ]]; then
 		cp $THISDIR/services/jupyter.service /lib/systemd/system/jupyter.service
 	else
+		#Secure setup
 		cp $THISDIR/services/jupyter_auth.service /lib/systemd/system/jupyter.service
+		#Override the config
+		cp $THISDIR/config/jupyter_notebook_config_auth.py $JUPYTERCONFIGDIR/jupyter_notebook_config.py
 	fi
 	
 	# Enable autostart
