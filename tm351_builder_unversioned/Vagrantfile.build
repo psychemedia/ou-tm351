@@ -1,0 +1,279 @@
+#Vagrantfile for building machine from build scripts
+
+#Set the environment variable from the command line used to call vagrant for:
+# - password for authenticated services (default is: tm351)
+#export TMP_PASS="123"
+
+##For web host provisioning:
+### --provider=digital ocean: export DIGITAL_OCEAN_TOKEN="YOUR TOKEN HERE"
+##--provider=linode: export LINODE_API_KEY="YOUR KEY HERE"
+
+Vagrant.configure("2") do |config|
+	
+
+	#grub problem appears to be getting worse and spreading...
+    config.vm.provision :shell, :inline => <<-SH
+    	apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y -o DPkg::options::="--force-confdef" -o DPkg::options::="--force-confold" install grub-pc
+	SH
+
+#------------------------- PROVIDER: VIRTUALBOX (BUILD) ------------------------------
+
+config.vm.provider :virtualbox do |virtualbox|
+  
+	#ubuntu/xenial bug? https://bugs.launchpad.net/cloud-images/+bug/1569237
+	config.vm.box = "bento/ubuntu-16.04"
+	#Stick with the default key
+	config.ssh.insert_key=false
+	
+	#For local testing:
+	#config.vm.box = "tm351basebuild"
+	#override.vm.box_url = "https://dl.dropboxusercontent.com/u/1156404/tm351basebuild.box"
+	#config.vm.box_url = "../boxes/test.box"
+	
+	config.vm.hostname = "tm351base"
+
+	virtualbox.name = "tm351basebuildbuild"
+	#We need the memory to install scipy and build indexes on seeded mongodb
+	#After the build it can be reduced back down to 1024
+	virtualbox.memory = 2048
+	#virtualbox.cpus = 1 
+	# virtualbox.gui = true
+
+	#---- START PORT FORWARDING ----
+	#Registered ports: https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
+	#ipython notebook
+	config.vm.network :forwarded_port, guest: 8888, host: 35100, auto_correct: true
+	#openrefine
+	config.vm.network :forwarded_port, guest: 3334, host: 35101, auto_correct: true
+	#mongodb
+	config.vm.network :forwarded_port, guest: 28017, host: 35102, auto_correct: true
+
+	#Purely for testing - also requires simple_auth.sh at end
+	#webserver
+	config.vm.network :forwarded_port, guest: 80, host: 35188, auto_correct: true
+	#jupyter secure
+	config.vm.network :forwarded_port, guest: 35180, host: 35180, auto_correct: true
+	#refine secure
+	config.vm.network :forwarded_port, guest: 35181, host: 35181, auto_correct: true
+
+	#---- END PORT FORWARDING ----
+		
+end
+    
+#------------------------- END PROVIDER: VIRTUALBOX (BUILD) ------------------------------
+
+#------------------------- PROVIDER: DIGITAL OCEAN ------------------------------
+
+#https://github.com/devopsgroup-io/vagrant-digitalocean
+
+#From command line you call vagrant from:
+#export DIGITAL_OCEAN_TOKEN="YOUR TOKEN HERE"
+
+config.vm.provider :digital_ocean do |provider, override|
+
+	override.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: [ ".git/", ".scraps/", ".DS_Store", "logs/", "openrefine/.DS_Store", "notebooks/.ipynb_checkpoints", "notebooks/.DS_Store", "quickbuild/", "Vagrantfile", "awspacker.json", "toupload/"]
+
+	override.ssh.insert_key=true
+    override.ssh.private_key_path = '~/.ssh/id_rsa'
+    override.vm.box = 'digital_ocean'
+    override.vm.box_url = "https://github.com/devopsgroup-io/vagrant-digitalocean/raw/master/box/digital_ocean.box"
+    provider.token = ENV['DIGITAL_OCEAN_TOKEN']
+    provider.image = 'ubuntu-16-04-x64'
+    provider.region = 'lon1'
+    provider.size = '2gb'
+        
+	override.vm.provision :shell, :env => {"TMP_PASS" => ENV["TMP_PASS"], "AUTH_BUILD"=> 1}, :inline => <<-SH
+
+  		source /vagrant/build/simple_auth.sh
+	SH
+    
+  end
+
+#------------------------- END PROVIDER: DIGITAL OCEAN ------------------------------
+
+
+
+
+#------------------------- PROVIDER: LINODE ------------------------------
+
+#https://github.com/displague/vagrant-linode
+
+#From command line you call vagrant from:
+#export LINODE_API_KEY="YOUR KEY HERE"
+
+config.vm.provider :linode do |provider, override|
+	override.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: [ ".git/", ".scraps/", ".DS_Store", "logs/", "openrefine/.DS_Store", "notebooks/.ipynb_checkpoints", "notebooks/.DS_Store", "quickbuild/", "Vagrantfile", "awspacker.json", "toupload/"]
+	override.ssh.insert_key=true
+    override.ssh.private_key_path = '~/.ssh/id_rsa'
+    override.vm.box = 'linode/ubuntu1604'
+
+    provider.api_key = ENV["LINODE_API_KEY"]
+    provider.distribution = 'Ubuntu 16.04 LTS'
+    provider.datacenter = 'london'
+    provider.plan = 'Linode 2048'
+    provider.size=2048
+	
+	override.vm.provision :shell, :env =>  {"TMP_PASS" => ENV["TMP_PASS"], "AUTH_BUILD"=> 1}, :inline => <<-SH
+		
+  		source /vagrant/build/simple_auth.sh
+	SH
+  end
+
+#------------------------- END PROVIDER: LINODE ------------------------------
+
+
+
+#------------------------- PROVIDER: AZURE ------------------------------
+#https://github.com/Azure/vagrant-azure
+#vagrant box add azure https://github.com/azure/vagrant-azure/raw/v2.0/dummy.box
+#curl -L https://aka.ms/InstallAzureCli | bash
+
+#Install the Azure CLI
+#https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
+#On a Mac: curl -L https://aka.ms/InstallAzureCli | bash
+#az login
+#Handshake via website
+
+config.vm.provider :azure do |azure, override|
+	override.ssh.private_key_path = '~/.ssh/id_rsa'
+	override.vm.box = 'azure'
+	azure.location="uksouth"
+	azure.resource_group_name="tm351azuretest"
+	azure.vm_name="tm351azurevmtest"
+	
+	#Set DNS prefix name - how are clashes avoided?
+	#azure.dns_name=""
+	
+	# ~/bin/az vm image list
+	azure.vm_image_urn="Canonical:UbuntuServer:16.04-LTS:latest"
+
+    # use Azure Active Directory Application / Service Principal to connect to Azure
+    # see: https://azure.microsoft.com/en-us/documentation/articles/resource-group-create-service-principal-portal/
+
+    # each of the below values will default to use the env vars named as below if not specified explicitly
+	
+	#https://portal.azure.com/#blade/HubsExtension/MyAccessBlade/resourceId/
+    azure.subscription_id = ENV['AZURE_SUBSCRIPTION_ID']
+
+	# ~/bin/az ad sp create-for-rbac    
+    #(application is client)
+    azure.tenant_id = ENV['AZURE_TENANT_ID']
+    azure.client_id = ENV['AZURE_CLIENT_ID']
+    azure.client_secret = ENV['AZURE_CLIENT_SECRET']
+    #Monitor via https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps
+    
+    override.vm.provision :shell, :env =>  {"TMP_PASS" => ENV["TMP_PASS"], "AUTH_BUILD"=> 1}, :inline => <<-SH
+		
+  		source /vagrant/build/simple_auth.sh
+  	
+	SH
+	
+	#Need to set up  security rule:
+	# ~/bin/az vm open-port -g tm351azuretest -n tm351azuretest --port 80 --priority 130
+	# ~/bin/az vm open-port -g tm351azuretest -n tm351azuretest --port 35180 --priority 140
+	# ~/bin/az vm open-port -g tm351azuretest -n tm351azuretest --port 35181 --priority 150
+	
+	#Get IP address:
+	# ~/bin/az vm list-ip-addresses
+
+  end
+#------------------------- END PROVIDER: AZURE ------------------------------
+
+
+
+#------------------------- PROVIDER: AWS ------------------------------
+
+#https://github.com/mitchellh/vagrant-aws
+# https://oliverveits.wordpress.com/2016/04/01/aws-automation-using-vagrant-a-hello-world-example/
+# See also packer, for producing AMIs...
+
+#May take some time to come up...
+config.vm.provider :aws do |aws, override|
+
+  	#Download and install the Amazon Command Line Interface
+  	#http://docs.aws.amazon.com/cli/latest/userguide/installing.html
+  	#Configure the command line interface
+  	#http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+  	#aws configure
+  	
+  	#Optionally:
+  	#aws iam create-user --user-name vagrant
+  	#Attach policy to user - AmazonEC2FullAccess
+  	#ARNs - http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html
+  	#aws iam attach-user-policy --user-name vagrant --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess
+  	#then redo `aws configure` using credentials from:
+  	#aws iam create-access-key --user-name vagrant
+  	
+  	#Create security group
+  	#aws ec2 create-security-group --group-name tm351cloud --description "Security group for tm351 services"
+  	aws.security_groups = ["tm351cloud"]
+  	#Create security group rules
+  	# The /24 says: IPv4
+  	#MYIP=$(curl http://checkip.amazonaws.com/)
+	#aws ec2 authorize-security-group-ingress --group-name tm351cloud --protocol tcp --port 22 --cidr ${MYIP}/0
+	#aws ec2 authorize-security-group-ingress --group-name tm351cloud --protocol tcp --port 80 --cidr 0.0.0.0/0
+	#aws ec2 authorize-security-group-ingress --group-name tm351cloud --protocol tcp --port 35180 --cidr 0.0.0.0/0
+	#aws ec2 authorize-security-group-ingress --group-name tm351cloud --protocol tcp --port 35181 --cidr 0.0.0.0/0
+	#check:
+	#aws ec2 describe-security-groups --group-names tm351cloud
+	
+	
+  	override.vm.hostname = "tm351aws"
+  	#vagrant box add awsdummy https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box
+    override.vm.box = "awsdummy"
+    
+    #Request the session auth key id, secret access key and token
+  	#aws sts get-session-token --duration-seconds 259200 (enter your own duration)
+    aws.access_key_id = ENV["AWS_VAGRANT_ACCESS_KEY_ID"]
+    aws.secret_access_key = ENV["AWS_VAGRANT_SECRET_ACCESS_KEY"]
+    aws.session_token =  ENV["AWS_VAGRANT_SESSION_TOKEN"]
+
+	#aws ec2 create-key-pair --key-name vagrantaws --query 'KeyMaterial' --output text > vagrantaws.pem
+	#chmod 400 vagrantaws.pem
+	aws.keypair_name="vagrantaws"
+	
+	aws.region = "eu-west-1"
+    aws.ami = "ami-971238f1" 
+    aws.instance_type="t2.small"
+
+    override.ssh.username = "ubuntu"
+    override.ssh.private_key_path = "vagrantaws.pem"
+    
+  end
+
+#aws ec2 describe-instances
+
+#AMI generation - use describe instances to get ID
+#need to add permission to create this???? should be in ec2 all though?
+#aws ec2 create-image --instance-id ENV["AWS_VAGRANT_INSTANCE_ID"] --name "TM351_test1_fromvagrant" --description "Test AMI for TM351"
+#else create from EC2 management console
+
+#run from AMI:
+#aws ec2 run-instances --image-id ami-7f9c9719 --count 1 --instance-type t2.small --key-name vagrantaws --security-groups tm351cloud
+
+#connect via ssh
+#ssh -i vagrantaws.pem ubuntu@ec2-WHATEVER.eu-west-1.compute.amazonaws.com
+
+# TIDY UP
+# vagrant destroy should kill he instance, but the key pair may still be billed against
+# aws ec2 delete-key-pair --key-name vagrantaws
+
+#------------------------- END PROVIDER: AWS ------------------------------
+
+
+
+
+#------------------------------
+
+  #The TMP_PASS var is set during provisioning, and sets the simple auth password
+  config.vm.provision :shell, :env => {"TMP_PASS" => ENV["TMP_PASS"]}, :inline => <<-SH
+  	#Add build scripts here
+  	cd /vagrant/build
+  	source ./monolithic_build.sh
+  	
+  	#Testing
+  	source /vagrant/build/simple_auth.sh
+  SH
+  
+  
+end
