@@ -10,7 +10,9 @@ LOGPATH=${MONGO_LOG-/vagrant/logs/}mongocluster_
 echo "Starting config server..."
 mongod --logpath "${LOGPATH}cfg-a2.log" --pidfilepath "${LOGPATH}cfg-a2.pid" --replSet $CONFIGSVR_REPL_SET --dbpath /data/config/config-a --port ${MONGO_CONFIGSVR_PORT} --fork --configsvr --smallfiles
 
+echo "Sleep for 5..."
 sleep 5
+echo "...done"
 
 echo "Configuring config replica set"
 #Couldn't work out how to pass var and JSON quotes in Here String via the pipe?
@@ -22,19 +24,26 @@ config = { _id: $CONFIGSVR_REPL_SET_STR , members:[
 rs.initiate(config)
 EOF
 
+echo "Sleep for 5..."
 sleep 5
+echo "...done"
 
 
 # now start the mongos on a standard port
 mongos --logpath "${LOGPATH}mongos-2.log" --pidfilepath "${LOGPATH}mongos-2.pid" --configdb ${CONFIGSVR_REPL_SET}/localhost:${MONGO_CONFIGSVR_PORT} --fork
 
+echo "Sleep for 5..."
 sleep 5
+echo "...done"
 
 echo "starting servers for shard 0"
 mongod --replSet s0 --logpath "${LOGPATH}s0-r0.log" --pidfilepath "${LOGPATH}s0-r0.pid" --dbpath /data/shard0/rs0 --port 37017 --fork --shardsvr --smallfiles
 
 
+echo "Sleep for 5..."
 sleep 5
+echo "...done"
+
 # connect to one server and initiate the set
 echo "Configuring s0 replica set"
 mongo --port 37017 << 'EOF'
@@ -47,7 +56,9 @@ echo "starting servers for shard 1"
 mongod --replSet s1 --logpath "${LOGPATH}s1-r0.log" --pidfilepath "${LOGPATH}s1-r0.pid" --dbpath /data/shard1/rs0 --port 47017 --fork --shardsvr --smallfiles
 
 
+echo "Sleep for 5..."
 sleep 5
+echo "...done"
 
 echo "Configuring s1 replica set"
 mongo --port 47017 << 'EOF'
@@ -61,7 +72,9 @@ echo "starting servers for shard 2"
 mongod --replSet s2 --logpath "${LOGPATH}s2-r0.log" --pidfilepath "${LOGPATH}s2-r0.pid" --dbpath /data/shard2/rs0 --port 57017 --fork --shardsvr --smallfiles
 
 
+echo "Sleep for 5..."
 sleep 5
+echo "...done"
 
 echo "Configuring s2 replica set"
 mongo --port 57017 << 'EOF'
@@ -71,7 +84,8 @@ rs.initiate(config)
 EOF
 
 
-echo "Waiting 10 seconds for the replica sets to fully come online"
+echo "Waiting 10 seconds for the replica sets to fully come online..."
 sleep 10
+echo "...done: should be online now"
 
 #--------
