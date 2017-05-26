@@ -27,17 +27,14 @@ mkdir -p $JUPYTERCONFIGDIR
 #These directories are where the original source files are located for the build
 TM351CUSTOMFILEPATH=$JUPYTERSRC/custom
 TM351NBCONFIGFILEPATH=$JUPYTERSRC/nbconfig
-TM351TPLEXTENSIONSFILEPATH=$JUPYTERSRC/extensions
 TM351TPLTEMPLATESFILEPATH=$JUPYTERSRC/templates
 
 
 #Directories on the VM that need to exist
-TPLEXTENSIONS=$JUPYTERDATADIR/extensions
 TPLTEMPLATES=$JUPYTERDATADIR/templates #not sure about this
 CUSTOMISATIONS=$JUPYTERCONFIGDIR/custom
 
 echo "Ensuring required jupyter sub-directories available"
-mkdir -p $TPLEXTENSIONS
 mkdir -p $TPLTEMPLATES
 mkdir -p $CUSTOMISATIONS
 
@@ -54,7 +51,6 @@ cp $TM351CUSTOMFILEPATH/* $JUPYTERCONFIGDIR/custom/
 
 #nbconvert templating extensions
 echo "Ensuring jupyter template extension files available"
-cp -r $TM351TPLEXTENSIONSFILEPATH/* $TPLEXTENSIONS/
 cp -r $TM351TPLTEMPLATESFILEPATH/* $TPLTEMPLATES/
 
 
