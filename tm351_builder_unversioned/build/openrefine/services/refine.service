@@ -1,5 +1,5 @@
 [Unit]
-Description=Refine
+Description=OU TM351 OpenRefine
 
 #When to bring the service up
 #via https://www.freedesktop.org/wiki/Software/systemd/NetworkTarget/
