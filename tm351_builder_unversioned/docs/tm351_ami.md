@@ -36,11 +36,15 @@ Move on to the next step.
 
 #### Add Storage
 
+The storage volume contains all the files associated with the machine instance, including your Jupyter notebooks and Open Refine project files.
+
 You should not need to add any additional storage. 
 
 ![](images/EC2_Management_Console4.png)
 
-Accept the defaults and move on to the next step.
+Bu default, the storage volume (and all your files) will be deleted if the instance it is attached to is terminated. You may wish to uncheck this option (*though I'm not sure atm how you would reattach it to a new instance?*).
+
+When you are happy with he settings, move on to the next step.
 
 #### Add Tags
 
