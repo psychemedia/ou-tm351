@@ -1,3 +1,5 @@
+# Running the TM351 VM on Amazon Webservices Using the TM351 AMI
+
 As well as running the TM351 VM on your own computer, the virtual machine can also be hosted on a remote server.
 
 Amazon AMIs are virtual machine images that can be used to launch pre-configured virtual machines using Amazon Web Services (AWS).
