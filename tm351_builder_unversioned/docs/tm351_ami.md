@@ -20,11 +20,13 @@ Start the AWS AMI launch wizard: [ami-ab1403cd - eu-west (Ireland)](https://cons
 
 #### Choose Instance Type
 
-It is recommended that you use a `t2.small` server or above.
+The AMI should run - mostly! - in the free tier using a `t2.micro` instance. However, you may it runs more smoothly using a `t2.small` server or above, particularly if you have several notebooks containing large in-memory *pandas* dataframes.
 
 ![](images/EC2_Management_Console2.png)
 
-**Note - if you use the `t2.micro` server, which is available on the AWS free tier, only 1GB of RAM is available. The OpenRefine service and the sharded mongo database may not run under this resource constraint. All services should run correctly using the 2GB `t2.small` machine, and up.**
+**Note - if you use the `t2.micro` server, which is available on the AWS free tier, only 1GB of RAM is available. The sharded mongo database may not run under this resource constraint and OpenRefine may also throw an error. All services should run correctly using the 2GB `t2.small` machine, and up.**
+
+*Note - in the `ami-ab1403cd` instance, you can tweak the OpenRefine memory allocation down from its default to ensure that it will run. From the notebook homepage, open a new terminal, edit the service definition file (`/lib/systemd/system/refine.service`) and add ` -m 512m` to the end of the `ExecStart` line so that it reads `ExecStart=/opt/openrefine-2.7-rc.2/refine -p 3334 -d /vagrant/openrefine_projects -m 512m`; `ctrl-x` to save and the exit `nano` editor. Reboot the AMI from the AWS instance control panel to restart the machine.*
 
 #### Configure Instance
 
@@ -129,11 +131,11 @@ Copy this address into your web browser and you should see the TM351 AMI homepag
 
 ![](images/TM351Web.png)
 
-On port **35180** at that URL you should be able to see the Jupyter notebook server. Log in with the password: `tm351`.
+On port **35180** at that URL you should be able to see the Jupyter notebook server. This may take a minute or two for the server to start up. Log in with the password: `tm351`.
 
 ![](images/JupyterAuth.png)
 
-On port **35181** at that URL you should be able to reach the Open Refine server once you have got through an authentication layer. Log in with the username `tm351` and no password.
+On port **35181** at that URL you should be able to reach the Open Refine server once you have got through an authentication layer. The Open Refine server may take wo or hree minutes to start up. during which time you will get an *nginx* `HTTP 502 error (bad gateway)`. WHen he service is running, log in with the username `tm351` and no password.
 
 ![](images/openrefineAuth.png)
 
