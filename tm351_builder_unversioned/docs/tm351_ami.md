@@ -20,7 +20,7 @@ Start the AWS AMI launch wizard: [ami-ab1403cd - eu-west (Ireland)](https://cons
 
 #### Choose Instance Type
 
-The AMI should run - mostly! - in the free tier using a `t2.micro` instance. However, you may it runs more smoothly using a `t2.small` server or above, particularly if you have several notebooks containing large in-memory *pandas* dataframes.
+The AMI should run - mostly! - in the free tier using a `t2.micro` instance. However, you may find it runs more smoothly using a `t2.small` server or above, particularly if you have several notebooks containing large in-memory *pandas* dataframes.
 
 ![](images/EC2_Management_Console2.png)
 
