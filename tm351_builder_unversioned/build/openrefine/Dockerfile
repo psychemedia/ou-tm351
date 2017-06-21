@@ -21,5 +21,5 @@ RUN mkdir -p /openrefine_projects
 
 VOLUME /openrefine_projects
 
-CMD /opt/openrefine-2.7-rc.2/refine -p 3334 -i 0.0.0.0 -d /openrefine_projects 
+CMD /opt/openrefine-2.7/refine -p 3334 -i 0.0.0.0 -d /openrefine_projects 
 

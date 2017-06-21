@@ -10,8 +10,8 @@ After=network.target
 
 
 [Service]
-Environment=REFINE_HOST=127.0.0.1
-ExecStart=/opt/openrefine-2.7-rc.2/refine -p 3334 -d /vagrant/openrefine_projects
+Environment=REFINE_HOST=0.0.0.0
+ExecStart=/opt/openrefine-2.7/refine -p 3334 -d /vagrant/openrefine_projects -m 512m
 Restart=always
 RestartSec=10
 
