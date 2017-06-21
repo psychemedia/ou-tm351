@@ -2,7 +2,8 @@
 
 apt-get -y update && \
 apt-get install -y libpq-dev libgeos-dev libgdal-dev && \
-apt-get install -y libxml2-dev libxslt-dev
+apt-get install -y libxml2-dev libxslt-dev && \
+apt-get install -y fonts-liberation
 
 export CPLUS_INCLUDE_PATH=/usr/include/gdal
 export C_INCLUDE_PATH=/usr/include/gdal
