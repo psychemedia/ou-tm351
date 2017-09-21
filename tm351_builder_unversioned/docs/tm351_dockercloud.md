@@ -8,7 +8,8 @@ To run the linked services:
 - link a cloud host to your DockerCloud account (I use Digital Ocean)
 - create a stack using this [test stack file](https://raw.githubusercontent.com/psychemedia/ou-tm351/master/tm351_builder_unversioned/docs/stacks/tm351_test_stack.yaml)
 - launch a node (I tend to use a 2GB memory / 40GB storage machine)
-- launch the stack on the node.
+- launch the stack on the node
+- remember to turn the nodes off when you aren't using them; (not sure if/how data containers can be persisted, for free? Or deleted if they incur a storage charge?)
 
 Note that the services are all unauthenticated, though may be possible to reuse elements of eg the cloud builds (eg AWS) to use nginx as authenticating proxy, set up Jupyter credentials, etc?
 
