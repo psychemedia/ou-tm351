@@ -1,6 +1,6 @@
 # Running the TM351 Constainers Using DockerCloud.
 
-The various TM351 services have been defined in a set of Dockr containers that can be run together using *Docker Compose*.
+The various TM351 services have been defined in a set of Docker containers that can be run together using *Docker Compose*.
 
 To run the linked services:
 
