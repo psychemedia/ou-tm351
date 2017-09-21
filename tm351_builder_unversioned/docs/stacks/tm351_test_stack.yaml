@@ -1,0 +1,33 @@
+#should maybe also host volume links for notebook (/notebooks) and openrefine (/mnt/refine)
+
+devpostgresdata:
+  command: echo created
+  image: 'busybox:latest'
+  volumes:
+    - /var/lib/postgresql/data
+mongodb:
+  image: 'psychemedia/ou-tm351-mongo-simple-test:latest'
+  ports:
+    - '27017:27017'
+notebook:
+  image: 'psychemedia/ou-tm351-jupyter-custom-pystack-mongoshard-test:latest'
+  links:
+    - mongodb
+    - openrefine
+    - postgres
+  ports:
+    - '35150:8888'
+  privileged: true
+openrefine:
+  image: 'psychemedia/ou-tm351-openrefine-test:latest'
+  ports:
+    - '35151:3334'
+  privileged: true
+postgres:
+  environment:
+    - POSTGRES_PASSWORD=PGPass
+  image: 'psychemedia/ou-tm351-postgres-test:latest'
+  ports:
+    - '5432:5432'
+  volumes_from:
+    - devpostgresdata
