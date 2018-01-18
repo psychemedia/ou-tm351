@@ -8,12 +8,14 @@ Vagrant.configure("2") do |config|
 
 #To get started:
 #vagrant box remove tm351_17J_testbuild
-#Download the box to eg ~/Dropbox/TM351_17J from https://www.dropbox.com/s/dtmklx2gvlouwmi/tm351_17J_testbuild.box?dl=0 and run:
+#Download the box to eg ~/Dropbox/TM351_17J from https://www.dropbox.com/s/sz1q9btwl85wcg3/tm351_17J_testbuild.box?dl=0 and run:
 #vagrant box add tm351_17J_testbuild ~/Dropbox/TM351_17J/tm351_17J_testbuild.box
 #vagrant up
 
 
 config.vm.provider :virtualbox do |virtualbox|
+
+        #config.vm.synced_folder "~/Dropbox/testvagrant", "/vagrant"
 
 	config.vm.provision :shell, :inline => <<-SH
 		mkdir -p /vagrant/notebooks
@@ -30,12 +32,15 @@ config.vm.provider :virtualbox do |virtualbox|
 	config.ssh.insert_key=false
 	
 	#For local testing:
-	config.vm.box = "tm351_17J_testbuild"
-	
+	#config.vm.box = "tm351_17J_testbuild"
 	#Rather than vagrant add, we can back src in with one of following styles
-	#config.vm.box_url = "https://www.dropbox.com/s/dtmklx2gvlouwmi/tm351_17J_testbuild.box?dl=0"
+	#config.vm.box_url = ""
 	#config.vm.box_url = "../boxes/test.box"
 	
+	#Path for downloading box from vagrantcloud
+	config.vm.box = "ouseful/tm351_17J"
+
+
 	config.vm.hostname = "tm351-17J-test"
 
 	virtualbox.name = "tm351_17J_test_vb"
@@ -44,24 +49,22 @@ config.vm.provider :virtualbox do |virtualbox|
 	virtualbox.memory = 1024
 	#virtualbox.cpus = 1 
 	# virtualbox.gui = true
+	
+	#Path for custom synced folder
+	#config.vm.synced_folder "PATH/TO/YOUR FOLDER"
 
 	#---- START PORT FORWARDING ----
 	#Registered ports: https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
 	#ipython notebook
-	config.vm.network :forwarded_port, guest: 8888, host: 35100, auto_correct: true
+	config.vm.network :forwarded_port, guest: 8888, host: 35180, auto_correct: true
 	#openrefine
-	config.vm.network :forwarded_port, guest: 3334, host: 35101, auto_correct: true
-	#mongodb
-	config.vm.network :forwarded_port, guest: 28017, host: 35102, auto_correct: true
+	config.vm.network :forwarded_port, guest: 3334, host: 35181, auto_correct: true
+        #webserver
+	config.vm.network :forwarded_port, guest: 80, host: 35100, auto_correct: true
+	config.vm.network :forwarded_port, guest: 5432, host: 35182, auto_correct: true
 
-	#Purely for testing - also requires simple_auth.sh at end
-	#webserver
-	config.vm.network :forwarded_port, guest: 80, host: 35188, auto_correct: true
-	#jupyter secure
-	config.vm.network :forwarded_port, guest: 35180, host: 35180, auto_correct: true
-	#refine secure
-	config.vm.network :forwarded_port, guest: 35181, host: 35181, auto_correct: true
-
+	#TH custom- nbdime
+	config.vm.network :forwarded_port, guest: 8899, host: 35199, auto_correct: true
 	#---- END PORT FORWARDING ----
 		
 end
